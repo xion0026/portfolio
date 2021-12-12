@@ -1,0 +1,22 @@
+:root {
+    --bs-primary: #ffffff;
+    --bs-primary-rgb: 255,255,255;
+    --bs-secondary:#F7F7F8;
+    --bs-secondary-rgb:247,247,247;
+    --bs-dark:#222;
+    --bs-dark-rgb:34,34,34;
+    --bs-gray-700: #495057;
+    
+  }
+.btn-outline-primary{
+    border-color: var(--bs-primary)!important;
+    background-color: var(--bs-dark)!important;
+    color: var(--bs-secondary)!important;
+}
+.btn-outline-primary:hover{
+    background-color:var(--bs-gray-700)!important;
+}
+.banner{
+    background: var(--bs-dark) url(../images/banner1.jpg) no-repeat center;
+    background-size: cover;
+}
