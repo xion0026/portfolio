@@ -1,3 +1,13 @@
+/* font */
+body{
+    font-family: 'Vollkorn', serif;
+    margin-top: 1.5em;
+}
+.name{
+    font-family: 'Permanent Marker',cursive;
+    font-size: 3em;
+}
+/* root */
 :root {
     --bs-primary: #ffffff;
     --bs-primary-rgb: 255,255,255;
@@ -5,8 +15,7 @@
     --bs-secondary-rgb:247,247,247;
     --bs-dark:#222;
     --bs-dark-rgb:34,34,34;
-    --bs-gray-700: #495057;
-    
+    --bs-gray-700: #495057;   
   }
 .btn-outline-primary{
     border-color: var(--bs-primary)!important;
@@ -19,10 +28,6 @@
 .banner{
     background: var(--bs-dark) url(../images/banner.jpg) no-repeat center;
     background-size: cover;
-}
-.introduce{
-    width: 700px;
-    height: auto;
 }
 .container-sm{
     text-align: center;
@@ -37,4 +42,67 @@
 }
 .project img{
     width: 680px;
+}
+/***********************
+Landscape phone and up
+*************************/
+@media only screen and (min-width: 480px){
+body{
+    font-size: 14px;
+}
+}
+
+/**********************************
+Custom Media Query - 640px and up
+***********************************/
+@media only screen and (min-width: 640px) {
+body{
+        font-size: 16px;
+}
+.introduce{
+    width: 500px;
+    height: auto;
+} 
+}
+
+/************************
+Portrait tablet and up
+**************************/
+@media only screen and (min-width: 768px) {
+body{
+        font-size: 18px;
+}
+.introduce{
+    width: 600px;
+    height: auto;
+} 
+}
+
+/********************************
+Landscape desktop (17”) and up
+*********************************/
+
+@media only screen and (min-width: 960px) {
+body{
+    font-size: 19px;
+}
+.introduce{
+    width: 700px;
+    height: auto;
+} 
+}
+
+/*********************************
+Widescreen desktop (24”) and up
+**********************************/
+
+@media only screen and (min-width: 1160px) {
+body{
+        font-size: 20px;
+}
+.introduce{
+    width: 780px;
+    height: auto;
+} 
+
 }
