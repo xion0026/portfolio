@@ -2,11 +2,11 @@
 body{
     font-family: 'Vollkorn', serif;
     margin-top: .5em;
-    font-size: 25px;
+    font-size: 22px;
 }
 .name{
     font-family: 'Permanent Marker',cursive;
-    font-size: 5em;
+    font-size: 4em;
 }
 /* root */
 :root {
@@ -49,4 +49,5 @@ body{
     width: 980px;
     height: auto;
 }
+
 
