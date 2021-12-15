@@ -31,6 +31,10 @@ body{
 .container-sm{
     text-align: center;
 }
+.introduce{
+    width: 700px;
+    height: auto;
+} 
 .line{
     border-top: 2px solid #222;
     border-bottom : 2px solid #222;
@@ -47,24 +51,11 @@ Landscape phone and up
 *************************/
 @media only screen and (min-width: 480px){
 body{
-    font-size: 20px;
+    font-size: 22px;
 }
 .name{
     font-size: 5em;
 }
-}
-
-/**********************************
-Custom Media Query - 640px and up
-***********************************/
-@media only screen and (min-width: 640px) {
-body{
-        font-size: 16px;
-}
-.introduce{
-    width: 500px;
-    height: auto;
-} 
 }
 
 /************************
@@ -72,12 +63,11 @@ Portrait tablet and up
 **************************/
 @media only screen and (min-width: 768px) {
 body{
-        font-size: 18px;
+        font-size: 26px;
 }
-.introduce{
-    width: 600px;
-    height: auto;
-} 
+.name{
+    font-size: 7em;
+}
 }
 
 /********************************
@@ -86,12 +76,11 @@ Landscape desktop (17”) and up
 
 @media only screen and (min-width: 960px) {
 body{
-    font-size: 19px;
+    font-size: 30px;
 }
-.introduce{
-    width: 700px;
-    height: auto;
-} 
+.name{
+    font-size: 10em;
+}
 }
 
 /*********************************
@@ -100,11 +89,9 @@ Widescreen desktop (24”) and up
 
 @media only screen and (min-width: 1160px) {
 body{
-        font-size: 20px;
+        font-size: 32px;
 }
-.introduce{
-    width: 780px;
-    height: auto;
-} 
-
+.name{
+    font-size: 10em;
+}
 }
