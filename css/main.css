@@ -31,3 +31,10 @@
     border-top: 2px solid #222;
     border-bottom : 2px solid #222;
 }
+.cmsystem img{
+    width: 380px;
+    height: auto;
+}
+.project img{
+    width: 680px;
+}
