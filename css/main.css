@@ -2,9 +2,11 @@
 body{
     font-family: 'Vollkorn', serif;
     margin-top: .5em;
+    font-size: 20px;
 }
 .name{
     font-family: 'Permanent Marker',cursive;
+    font-size: 5em;
 }
 /* root */
 :root {
