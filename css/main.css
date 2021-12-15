@@ -2,7 +2,7 @@
 body{
     font-family: 'Vollkorn', serif;
     margin-top: .5em;
-    font-size: 20px;
+    font-size: 25px;
 }
 .name{
     font-family: 'Permanent Marker',cursive;
@@ -34,7 +34,7 @@ body{
     text-align: center;
 }
 .introduce{
-    width: 700px;
+    width: 980px;
     height: auto;
 } 
 .line{
@@ -42,10 +42,11 @@ body{
     border-bottom : 2px solid #222;
 }
 .cmsystem img{
-    width: 380px;
+    width: 680px;
     height: auto;
 }
 .project img{
-    width: 680px;
+    width: 980px;
+    height: auto;
 }
 
