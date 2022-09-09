@@ -29,6 +29,7 @@ body{
 .banner{
     background: var(--bs-dark) url(../images/banner.jpg) no-repeat center;
     background-size: cover;
+    height: 400px;  
 }
 .container-sm{
     text-align: center;
@@ -49,5 +50,14 @@ body{
     width: 980px;
     height: auto;
 }
+/*---- animation text -----*/
 
-
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+  .ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
