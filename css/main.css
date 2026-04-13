@@ -603,10 +603,12 @@
 
 .portrait-image {
   width: min(100%, 480px);
-  height: auto;
-  object-fit: contain;
+  height: 500px;
+  object-fit: cover;
+  object-position: center bottom;
   display: block;
 }
+
 
 
       .feature-list {
