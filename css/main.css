@@ -585,16 +585,21 @@
         padding: 28px 0 12px;
       }
 
-      .hero-visual,
-      .portrait-wrap,
-      .portrait-shape {
-        min-height: auto;
-        height: auto;
-      }
+      .hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 45% 12%, rgba(255, 255, 255, 0.9), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(46, 34, 25, 0.06) 100%);
+}
 
-      .portrait-wrap {
-  position: absolute;
-  inset: 0;
+.portrait-wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: end;
   justify-content: center;
@@ -602,10 +607,11 @@
 }
 
 .portrait-image {
-  width: min(100%, 480px);
-  height: 500px;
-  object-fit: cover;
-  object-position: center bottom;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
