@@ -1,10 +1,10 @@
 /* font */
- body {
-      font-family: 'Inter', sans-serif;
+body{font-family: 'Inter', sans-serif;
       background: #f8f9fa;
       color: #111;
     }
-    /* NAV */
+
+   /* NAV */
     .navbar {
       padding: 20px 40px;
     }
@@ -12,7 +12,6 @@
     .navbar-brand {
       font-weight: 700;
     }
-
     /* HERO */
     .hero {
       padding: 80px 0;
@@ -46,87 +45,27 @@
       color: #fff;
     }
 
-.name{
-    font-family: 'Permanent Marker',cursive;
-    font-size: 4em;
-}
-/* root */
-:root {
-    --bs-primary: #ffffff;
-    --bs-primary-rgb: 255,255,255;
-    --bs-secondary:#F7F7F8;
-    --bs-secondary-rgb:247,247,247;
-    --bs-dark:#222;
-    --bs-dark-rgb:34,34,34;
-    --bs-gray-700: #495057;   
-  }
-.btn-outline-primary{
-    border-color: var(--bs-primary)!important;
-    background-color: var(--bs-dark)!important;
-    color: var(--bs-secondary)!important;
-}
-.btn-outline-primary:hover{
-    background-color:var(--bs-gray-700)!important;
-}
-.banner{
-    background: var(--bs-dark) url(../images/banner.jpg) no-repeat center;
-    background-size: cover;
-    height: 400px;  
-}
-.container-sm{
-    text-align: center;
-}
-.introduce{
-    width: 1880px;
-    height: auto;
-} 
-.line{
-    border-top: 2px solid #222;
-    border-bottom : 2px solid #222;
-}
-.cmsystem img{
-    width: 680px;
-    height: auto;
-}
-.project img{
-    width: 980px;
-    height: auto;
-}
-/*---- animation text -----*/
+    /* SECTION */
+    .section {
+      padding: 80px 0;
+    }
 
-.ml2 {
-    font-weight: 900;
-    font-size: 3.5em;
-  }
-  
-  .ml2 .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
+    .card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.line{
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
-.card-text{
-    margin-top: 10px;
-}
-.bg-dark{
-    margin-top: 30px;
-}
-.business{
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-.card{
-    margin-bottom: 50px;
-}
-.skill_line{
-    margin-bottom: 50px;
-}
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
 
-.portfoliotitle{
-    color: #991D24;
-}
-
+    .footer {
+      background: #111;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
 
