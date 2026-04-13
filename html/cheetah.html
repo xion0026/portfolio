@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cheetah Case Study</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 0;
+    }
+
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-bottom: 80px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .image {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .before-after {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .tag {
+      font-size: 14px;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 60px 0;
+    }
+
+    .button {
+      background: #1a73e8;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2, .grid-3, .before-after {
+        grid-template-columns: 1fr;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 🟦 HERO -->
+  <div class="section hero">
+    <img src="hero.png" alt="hero image">
+
+    <h1>Cheetah Networks Website Redesign</h1>
+    <p>Redesigned a B2B telecom website to improve clarity and user engagement.</p>
+    <p class="tag">UI/UX Designer | 2023 | Figma, Web</p>
+  </div>
+
+  <!-- 🟨 BACKGROUND -->
+  <div class="section grid-2">
+    <div>
+      <h2>Background</h2>
+      <p>Cheetah Networks provides telecom monitoring and analytics solutions.</p>
+      <p>This project focused on improving content clarity and showcasing key offerings.</p>
+
+      <div class="card">
+        😕 Users struggled to understand the value proposition
+      </div>
+    </div>
+
+    <img src="background.png" class="image">
+  </div>
+
+  <!-- 🟥 PROBLEM -->
+  <div class="section">
+    <h2>Problem</h2>
+    <ul>
+      <li>Weak visual hierarchy</li>
+      <li>Key services not highlighted</li>
+      <li>Content hard to scan</li>
+      <li>Low engagement</li>
+    </ul>
+  </div>
+
+  <!-- 🟪 APPROACH -->
+  <div class="section">
+    <h2>My Approach</h2>
+    <div class="grid-3">
+      <div class="card">Simplified information architecture</div>
+      <div class="card">Clear content hierarchy</div>
+      <div class="card">Modular card layout</div>
+    </div>
+  </div>
+
+  <!-- 🟩 PROCESS -->
+  <div class="section">
+    <h2>Process</h2>
+    <div class="grid-3">
+      <div class="card">
+        <strong>Research</strong>
+        <p>Competitor analysis<br>Content audit</p>
+      </div>
+
+      <div class="card">
+        <strong>Ideation</strong>
+        <p>Wireframes<br>Layout exploration</p>
+      </div>
+
+      <div class="card">
+        <strong>Design</strong>
+        <p>UI system<br>Responsive design</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🟦 FINAL DESIGN -->
+  <div class="section">
+    <h2>Final Design</h2>
+
+    <img src="ui1.png" class="image">
+    <p>Clear modular layout improves scanability</p>
+
+    <img src="ui2.png" class="image">
+    <p>Highlighted key services for quick understanding</p>
+  </div>
+
+  <!-- 🟧 BEFORE AFTER -->
+  <div class="section">
+    <h2>Before vs After</h2>
+
+    <div class="before-after">
+      <div>
+        <img src="before.png" class="image">
+        <p>❌ Cluttered layout</p>
+      </div>
+
+      <div>
+        <img src="after.png" class="image">
+        <p>✅ Clear structure</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🟨 RESULTS -->
+  <div class="section">
+    <h2>Results</h2>
+    <ul>
+      <li>Improved content clarity</li>
+      <li>Enhanced navigation</li>
+      <li>Better visual hierarchy</li>
+    </ul>
+  </div>
+
+  <!-- 🟪 GRAPHIC -->
+  <div class="section">
+    <h2>Marketing & Visual Design</h2>
+    <img src="graphic.png" class="image">
+  </div>
+
+  <!-- ⚫ CTA -->
+  <div class="cta">
+    <h2>Let's Work Together</h2>
+    <a href="#" class="button">Contact Me</a>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -394,6 +394,22 @@
       justify-content: center;
       background: var(--surface-soft);
     }
+    .project-card {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+}
 
     .mock-screen,
     .mock-bottle,
