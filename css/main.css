@@ -71,14 +71,33 @@
       grid-template-columns: auto 1fr;
       align-items: center;
     }
+    
+/* --- Header --- */
+.header-wrap {
+  display: flex;
+  justify-content: space-between; /* 左右对齐 */
+  align-items: center;
+  padding: 10px 0;
+}
 
-    .brand {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
 
+.brand {
+  font-size: 0.8rem; 
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.brand-logo {
+  height: 20px; 
+  width: auto;
+}
+
+/* --- nav --- */
     .nav {
       display: flex;
       justify-content: flex-end;
@@ -114,8 +133,8 @@
     .section-title{
       margin-top: 10;
     }
+/* --- hero --- */
     .hero {
-  /* 顶部留 40px 到 80px，底部留 60px 到 100px */
   padding-top: clamp(40px, 8vh, 80px);
   padding-bottom: clamp(60px, 10vh, 100px);
 }
@@ -138,20 +157,13 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 10;
-    }
-
-    h1 {
-      max-width: 8ch;
-      font-size: clamp(2.9rem, 6.4vw, 4.4rem);
-      line-height: 1.02;
-      letter-spacing: -0.06em;
-    }
+    h1.hero-title {
+  max-width: 14ch;
+  font-size: clamp(2.4rem, 5vw, 3.6rem); 
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 30px; 
+}
 
     .hero-copy p:not(.eyebrow) {
       max-width: 44ch;
@@ -206,15 +218,6 @@
     radial-gradient(circle at 45% 12%, rgba(255, 255, 255, 0.9), transparent 18%),
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(46, 34, 25, 0.06) 100%);
 }
-h1.hero-title {
-  max-width: 14ch;
-  font-size: clamp(3rem, 7vw, 4.8rem); /* 稍微调大一点点 */
-  font-weight: 800; /* 加粗到极致，这是高级感的来源 */
-  line-height: 1.1;
-  letter-spacing: -0.04em; /* 紧凑的字间距更有现代感 */
-  color: #171717;
-  margin-bottom: 32px;
-}
 .text-design, .text-code {
   font-weight: 700;
   display: inline-block;
@@ -268,11 +271,19 @@ h1.hero-title {
   grid-template-columns: 1fr 0.92fr;
 }
 
-    .section {
+/* --- about me --- */
+ .section {
       background: var(--surface);
       border-top: 1px solid rgba(23, 23, 23, 0.06);
     }
+.section.about {
+  padding-top: 100px; 
+  padding-bottom: 100px;
+}
 
+.about-copy h1.section-title {
+  margin-bottom: 40px; 
+}
    
 .about-grid {
   display: grid;
@@ -282,22 +293,22 @@ h1.hero-title {
    margin-top: 10;
 }
 .about-copy p {
-  line-height: 1.7; /* 增加行高 */
-  color: #4b5563; /* 稍微调淡一点点黑，增加高级感 */
-  margin-bottom: 1.5rem;
+  line-height: 1.8; 
+  color: #4b5563; 
+  margin-bottom: 2rem;
 }
 
-
+/* --- My Expert Toolkit --- */
 .skill-category {
   margin-bottom: 24px;
 }
 
 .skill-category h3 {
-  font-size: 0.75rem; /* 缩小字体 */
-  color: #94a3b8; /* 使用更淡的灰色 */
-  letter-spacing: 0.05em; /* 增加字间距 */
+  font-size: 0.75rem;
+  color: #94a3b8; 
+  letter-spacing: 0.05em;
   margin-bottom: 8px;
-  margin-top: 20px; /* 增加分类间的距离 */
+  margin-top: 20px; 
 }
 
 .tags {
@@ -320,7 +331,7 @@ h1.hero-title {
 /*  Figma, React */
 .tag.highlight {
   background: #eff6ff;
-  color: #1d4ed8; /* 深一点的蓝色 */
+  color: #1d4ed8; 
   border: 1px solid #dbeafe;
 }
 
@@ -363,7 +374,7 @@ h1.hero-title {
   font-size: 1.2rem;
   margin-bottom: 12px;
   display: block;
-  color: #1f2937; /* 图标颜色深一点 */
+  color: #1f2937; 
 }
 
     .section-head-row {
@@ -656,3 +667,6 @@ h1.hero-title {
         align-items: flex-start;
       }
     }
+
+    
+#root { display: none; } 
