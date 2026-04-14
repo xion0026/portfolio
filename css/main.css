@@ -271,35 +271,41 @@
       border-top: 1px solid rgba(23, 23, 23, 0.06);
     }
 
-    /* 容器布局 */
+   
 .about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* 左右比例 */
+  grid-template-columns: 1.2fr 0.8fr; 
   gap: 60px;
   align-items: start;
 }
+.about-copy p {
+  line-height: 1.7; /* 增加行高 */
+  color: #4b5563; /* 稍微调淡一点点黑，增加高级感 */
+  margin-bottom: 1.5rem;
+}
 
-/* 标签云样式 */
+
 .skill-category {
   margin-bottom: 24px;
 }
 
 .skill-category h3 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  color: #666;
+  font-size: 0.75rem; /* 缩小字体 */
+  color: #94a3b8; /* 使用更淡的灰色 */
+  letter-spacing: 0.05em; /* 增加字间距 */
+  margin-bottom: 8px;
+  margin-top: 20px; /* 增加分类间的距离 */
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px 12px; 
+  margin-top: 10px;
 }
 
 .tag {
-  background: #f4f4f5; /* 浅灰色背景 */
+  background: #f4f4f5; 
   color: #3f3f46;
   padding: 6px 14px;
   border-radius: 100px;
@@ -310,10 +316,9 @@
 
 /*  Figma, React */
 .tag.highlight {
-  background: #eff6ff; /* 淡淡的蓝色 */
-  color: #2563eb;
-  border-color: #bfdbfe;
-  font-weight: 600;
+  background: #eff6ff;
+  color: #1d4ed8; /* 深一点的蓝色 */
+  border: 1px solid #dbeafe;
 }
 
 .tag:hover {
@@ -321,7 +326,7 @@
   transform: translateY(-2px);
 }
 
-/* 响应式适配 */
+
 @media (max-width: 968px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -352,16 +357,11 @@
     }
 
     .feature-icon {
-      width: 18px;
-      height: 18px;
-      margin-bottom: 14px;
-      border: 1px solid var(--line);
-      border-radius: 5px;
-      display: grid;
-      place-items: center;
-      color: var(--text);
-      font-size: 0.7rem;
-    }
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  display: block;
+  color: #1f2937; /* 图标颜色深一点 */
+}
 
     .skills-panel {
       padding-top: 56px;
