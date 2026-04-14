@@ -92,9 +92,8 @@
 }
 
 .brand-logo {
-  height: 80px; 
+  height: 120px; 
   width: auto;
-  gap: 5px; 
 }
 
 /* --- nav --- */
@@ -278,18 +277,18 @@
       background: var(--surface);
       border-top: 1px solid rgba(23, 23, 23, 0.06);
     }
-.section.about {
-  padding-top: 50px; 
-  padding-bottom: 50px;
+section.about {
+  padding-top: clamp(60px, 10vh, 100px) !important;
+  padding-bottom: 30px !important; /* 显著缩短底部留白 */
+  background-color: #fff;
 }
-.section-title {
-  font-size: 2rem; 
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 3rem; 
+.about .section-title {
+  font-size: 2.4rem !important; /* 强制加大 */
+  font-weight: 800 !important;
+  color: #111 !important;
+  margin-bottom: 2.5rem !important;
+  letter-spacing: -0.02em;
 }
-
-   
 .about-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr; 
@@ -297,10 +296,10 @@
   align-items: start;
    margin-top: 10;
 }
-.about-copy p {
-  line-height: 1.8; 
-  color: #4b5563; 
-  margin-bottom: 2rem;
+.about-copy .about-lead {
+  margin-bottom: 1.2rem !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 .feature-icon {
   width: 32px; 
@@ -321,22 +320,22 @@
   margin-bottom: 24px;
 }
 
-.skill-category h3 {
-  font-size: 0.95rem; 
-  font-weight: 700; 
-  color: #1f2937; 
-  letter-spacing: 0.05em;
+.skills-panel .skill-category h3 {
+  font-size: 1rem !important; /* 字体加大 */
+  font-weight: 700 !important; /* 加重 */
+  color: #1f2937 !important; /* 颜色加深 */
   text-transform: uppercase;
-  margin-top: 2rem;
-  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+  margin-top: 1.8rem !important;
+  margin-bottom: 12px !important;
 }
 .feature h3 {
-  font-size: 1.1rem; 
-  font-weight: 700;
+  font-size: 1.2rem !important; /* 字体加大 */
+  font-weight: 700 !important;
+  margin-top: 15px;
+  margin-bottom: 8px;
   color: #111;
-  margin-bottom: 10px;
 }
-
 
 .tags {
   display: flex;
