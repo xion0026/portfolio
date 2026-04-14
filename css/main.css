@@ -83,7 +83,6 @@
 .brand-group {
   display: flex;
   align-items: center;
-  gap: 5px; 
 }
 
 .brand {
@@ -95,6 +94,7 @@
 .brand-logo {
   height: 80px; 
   width: auto;
+  gap: 5px; 
 }
 
 /* --- nav --- */
