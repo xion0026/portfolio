@@ -105,16 +105,12 @@
       width: 100%;
       height: 1px;
       background: var(--text);
-    }
-
-    .nav-cta {
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: var(--dark);
-      color: #fff;
-      font-size: 0.84rem;
-      font-weight: 600;
-    }
+  
+}
+.nav-cta {
+  min-height: 38px;
+  padding: 0 16px;
+  font-size: 0.82rem; }
     .section-title{
       margin-top: 10;
     }
@@ -145,7 +141,7 @@
     h2,
     h3,
     p {
-      margin: 0;
+      margin: 10;
     }
 
     h1 {
@@ -169,34 +165,33 @@
       gap: 12px;
       margin-top: 26px;
     }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 0 18px;
-      border-radius: 10px;
-      border: 1px solid transparent;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-1px);
-    }
-
-    .btn-dark {
-      background: var(--dark);
-      color: #fff;
-    }
-
-    .btn-light {
-      background: #fff;
-      border-color: var(--line);
-    }
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px; /* 稍微调高一点，符合移动端无障碍点击标准 */
+  padding: 0 24px;
+  border-radius: 12px; /* 统一圆角 */
+  background-color: var(--dark); /* 统一背景色 */
+  color: #ffffff !important; /* 确保文字始终为白色 */
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  white-space: nowrap;
+}
+    
+.btn-primary:hover, 
+.btn-primary:focus-visible {
+  background-color: #333; /* 悬停时稍微变浅一点 */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
 
    .hero-visual {
   position: relative;
@@ -209,63 +204,42 @@
     radial-gradient(circle at 45% 12%, rgba(255, 255, 255, 0.9), transparent 18%),
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(46, 34, 25, 0.06) 100%);
 }
-/* 标题基础样式 */
 .hero-title {
-  max-width: 12ch; /* 稍微调大一点，确保两行排版好看 */
-  position: relative;
+  max-width: 14ch; /* 稍微放宽一点，让两行排版更稳 */
+  line-height: 1.1;
+  margin-bottom: 24px;
 }
-
-/* 共同的 Span 基础样式 */
-.hero-title span {
-  position: relative;
+.text-design, .text-code {
+  font-weight: 700;
   display: inline-block;
-  transition: all 0.3s ease;
-  cursor: default;
   padding: 0 4px;
+  position: relative;
 }
-
-/* 设计词汇：product empathy */
-.text-design:hover {
-  color: #a855f7; /* 粉紫色 */
+.text-design:hover { color: #a855f7; }
+.text-code:hover { 
+  color: #10b981; 
+  font-family: 'Courier New', monospace; /* 程序员最爱 */
 }
-
-/* 代码词汇：pixel-perfect code */
-.text-code:hover {
-  color: #10b981; /* 极客绿 */
-  font-family: 'Courier New', Courier, monospace; /* 悬停变等宽字体 */
-}
-
-/* 鼠标悬停显示 <tags> 的逻辑 */
-.text-design:hover::before, 
-.text-code:hover::before {
-  content: '<' attr(data-tag) '>';
-  position: absolute;
-  left: -50px; /* 根据需要调整位置 */
-  font-family: monospace;
-  font-size: 0.8rem;
-  opacity: 0.4;
-  color: currentColor;
-}
-
-.text-design:hover::after, 
-.text-code:hover::after {
-  content: '</>';
-  position: absolute;
-  right: -35px; /* 根据需要调整位置 */
-  font-family: monospace;
-  font-size: 0.8rem;
-  opacity: 0.4;
-  color: currentColor;
-}
-
-/* 响应式调整：如果标签挡住了文字，可以关掉或缩小 */
-@media (max-width: 768px) {
-  .text-design:hover::before, .text-design:hover::after,
-  .text-code:hover::before, .text-code:hover::after {
-    display: none;
+@media (min-width: 1024px) {
+  .text-design:hover::before, .text-code:hover::before {
+    content: '<' attr(data-tag) '>';
+    position: absolute;
+    left: -20px;
+    transform: translateX(-100%);
+    font-family: monospace;
+    font-size: 0.9rem;
+    opacity: 0.4;
+  }
+  .text-design:hover::after, .text-code:hover::after {
+    content: '</>';
+    position: absolute;
+    right: -10px;
+    transform: translateX(100%);
+    font-family: monospace;
+    font-size: 0.9rem;
+    opacity: 0.4;
   }
 }
-
 .portrait-wrap {
    position: absolute;
       inset: 0;
@@ -384,37 +358,6 @@
   display: block;
   color: #1f2937; /* 图标颜色深一点 */
 }
-
-    .skills-panel {
-      padding-top: 56px;
-    }
-
-    .skill {
-      margin-bottom: 18px;
-    }
-
-    .skill-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 8px;
-      font-size: 0.85rem;
-    }
-
-    .skill-row span:last-child {
-      color: var(--muted);
-    }
-
-    .skill-bar {
-      height: 2px;
-      background: #d5cec7;
-      overflow: hidden;
-    }
-
-    .skill-level {
-      height: 100%;
-      background: var(--text);
-    }
 
     .section-head-row {
       display: flex;
