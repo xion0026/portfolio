@@ -75,7 +75,7 @@
 /* --- Header --- */
 .header-wrap {
   display: flex;
-  justify-content: space-between; /* 左右对齐 */
+  justify-content: space-between; 
   align-items: center;
   padding: 10px 0;
 }
@@ -87,13 +87,13 @@
 }
 
 .brand {
-  font-size: 0.8rem; 
-  letter-spacing: 0.05em;
+  font-size: 1.5rem; 
+  letter-spacing: 0.1em;
   white-space: nowrap;
 }
 
 .brand-logo {
-  height: 20px; 
+  height: 60px; 
   width: auto;
 }
 
@@ -133,6 +133,7 @@
     .section-title{
       margin-top: 10;
     }
+
 /* --- hero --- */
     .hero {
   padding-top: clamp(40px, 8vh, 80px);
@@ -157,6 +158,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
+
     h1.hero-title {
   max-width: 14ch;
   font-size: clamp(2.4rem, 5vw, 3.6rem); 
@@ -183,11 +185,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px; /* 稍微调高一点，符合移动端无障碍点击标准 */
+  min-height: 44px;
   padding: 0 24px;
-  border-radius: 12px; /* 统一圆角 */
-  background-color: var(--dark); /* 统一背景色 */
-  color: #ffffff !important; /* 确保文字始终为白色 */
+  border-radius: 12px;
+  background-color: var(--dark);
+  color: #ffffff !important; 
   font-size: 0.88rem;
   font-weight: 600;
   border: 1px solid transparent;
@@ -198,7 +200,7 @@
     
 .btn-primary:hover, 
 .btn-primary:focus-visible {
-  background-color: #333; /* 悬停时稍微变浅一点 */
+  background-color: #333; 
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   color: #fff;
@@ -227,7 +229,7 @@
 .text-design:hover { color: #a855f7; }
 .text-code:hover { 
   color: #10b981; 
-  font-family: 'Courier New', monospace; /* 程序员最爱 */
+  font-family: 'Courier New', monospace; 
 }
 @media (min-width: 1024px) {
   .text-design:hover::before, .text-code:hover::before {
@@ -277,12 +279,19 @@
       border-top: 1px solid rgba(23, 23, 23, 0.06);
     }
 .section.about {
-  padding-top: 100px; 
-  padding-bottom: 100px;
+  padding-top: 50px; 
+  padding-bottom: 50px;
+}
+.section-title {
+  font-size: 2.2rem; /* 显著加大 */
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 3rem; /* 增加与下方内容的间距 */
 }
 
 .about-copy h1.section-title {
   margin-bottom: 40px; 
+  font-size: 1rem;
 }
    
 .about-grid {
@@ -297,6 +306,19 @@
   color: #4b5563; 
   margin-bottom: 2rem;
 }
+.feature-icon {
+  width: 32px; 
+  height: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.feature-icon svg, .feature-icon img {
+  width: 100%;
+  height: auto;
+  color: #111; 
+}
 
 /* --- My Expert Toolkit --- */
 .skill-category {
@@ -304,12 +326,21 @@
 }
 
 .skill-category h3 {
-  font-size: 0.75rem;
-  color: #94a3b8; 
+  font-size: 0.95rem; 
+  font-weight: 700; 
+  color: #1f2937; 
   letter-spacing: 0.05em;
-  margin-bottom: 8px;
-  margin-top: 20px; 
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 12px;
 }
+.feature h3 {
+  font-size: 1.1rem; 
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
 
 .tags {
   display: flex;
@@ -320,7 +351,7 @@
 
 .tag {
   background: #f4f4f5; 
-  color: #3f3f46;
+  color: #666;
   padding: 6px 14px;
   border-radius: 100px;
   font-size: 0.85rem;
