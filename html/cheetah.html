@@ -30,10 +30,49 @@
       margin-bottom: 80px;
     }
 
-    .hero img {
-      width: 100%;
-      border-radius: 12px;
-    }
+    .hero {
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf3);
+  padding: 100px 60px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  width: 45%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.meta {
+  font-size: 14px;
+  color: #888;
+}
+
+.hero-image {
+  width: 55%;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
 
     .grid-2 {
       display: grid;
@@ -106,6 +145,31 @@
     <p>Redesigned a B2B telecom website to improve clarity and user engagement.</p>
     <p class="tag">UI/UX Designer | 2023 | Figma, Web</p>
   </div>
+  <!-- 🟦 HERO -->
+  <section class="hero">
+  <div class="hero-container">
+    
+    <!--  -->
+    <div class="hero-text">
+      <h1>Cheetah Networks<br>Website Redesign</h1>
+      
+      <p class="subtitle">
+        Redesigned a B2B telecom website to improve clarity, 
+        highlight key offerings, and drive user engagement.
+      </p>
+      
+      <p class="meta">
+        UI/UX Designer · 2023 · Figma, Web
+      </p>
+    </div>
+
+    <!-- 右侧图片 -->
+    <div class="hero-image">
+      <img src="../images/cheetahcase.png" alt="Cheetah Website Mockup">
+    </div>
+
+  </div>
+</section>
 
   <!-- 🟨 BACKGROUND -->
   <div class="section grid-2">
