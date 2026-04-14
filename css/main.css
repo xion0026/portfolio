@@ -115,8 +115,10 @@
       margin-top: 10;
     }
     .hero {
-      padding: 12px 0 0;
-    }
+  /* 顶部留 40px 到 80px，底部留 60px 到 100px */
+  padding-top: clamp(40px, 8vh, 80px);
+  padding-bottom: clamp(60px, 10vh, 100px);
+}
 
     .hero-grid {
       grid-template-columns: 1fr 1.05fr;
