@@ -2,19 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cheetah Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheetah Networks | Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <style>
+    :root {
+      --bg: #f3efe9;
+      --surface: #ffffff;
+      --surface-soft: #f8f5f1;
+      --text: #171717;
+      --muted: #626262;
+      --line: #ddd6cf;
+      --dark: #1d1d1d;
+      --shadow: 0 22px 50px rgba(0, 0, 0, 0.08);
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 1160px;
+    }
+
+     * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f7f7f7;
-      color: #333;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top center, rgba(255, 255, 255, 0.72), transparent 38%),
+        linear-gradient(180deg, #f6f2ed 0%, var(--bg) 100%);
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: 14px;
     }
 
     .container {
       width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
     }
+
 
     h1, h2 {
       margin-bottom: 10px;
