@@ -115,7 +115,9 @@
       font-size: 0.84rem;
       font-weight: 600;
     }
-
+    .section-title{
+      margin-top: 10;
+    }
     .hero {
       padding: 12px 0 0;
     }
@@ -204,6 +206,7 @@
         radial-gradient(circle at 45% 12%, rgba(255, 255, 255, 0.9), transparent 18%),
         linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(46, 34, 25, 0.06) 100%);
     }
+
 .portrait-wrap {
   width: 100%;
   min-height: 520px;
