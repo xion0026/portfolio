@@ -502,12 +502,25 @@ section.work .section-title {
 
 /* --- footer --- */
 
-    .site-footer {
-      background: var(--dark);
-      color: #fff;
-      margin-top: 0;
-    }
+.site-footer {
+  background-color: #111111; 
+  padding: 100px 0 40px; 
+  color: #ffffff;
+}
+.footer-copy h2 {
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
 
+.footer-copy p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 40ch;
+  opacity: 0.6; 
+  font-weight: 400;
+}
     .site-footer .container {
       padding: 34px 0 16px;
     }
@@ -518,50 +531,50 @@ section.work .section-title {
       padding-bottom: 24px;
     }
 
-    .footer-copy h2 {
-      margin-bottom: 10px;
-      font-size: 1.75rem;
-    }
-
-    .footer-copy p {
-      max-width: 48ch;
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .footer-actions {
-      display: grid;
-      gap: 16px;
-      justify-items: end;
-    }
-
-    .footer-actions .btn {
-      min-height: 40px;
-      background: #fff;
-      color: var(--text);
-    }
-
+.footer-actions .btn-primary {
+  background-color: #fff !important;
+  color: #111 !important;
+  padding: 12px 28px;
+  font-size: 0.9rem;
+  border-radius: 100px; /* 药丸形状按钮 */
+}
     .socials {
       display: flex;
       gap: 10px;
     }
 
-    .socials a {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      display: grid;
-      place-items: center;
-      font-size: 0.82rem;
-    }
+.socials a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* 细微描边 */
+  background: transparent;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
 
-    .footer-bottom {
-      grid-template-columns: 1fr auto;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.55);
-      font-size: 0.74rem;
-    }
+.socials a:hover {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+  transform: translateY(-3px);
+}
+
+.status-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a855f7; /* 使用你设计词汇的粉紫色 */
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.footer-bottom {
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  opacity: 0.4;
+}
 
     @media (max-width: 960px) {
       .hero-grid,
