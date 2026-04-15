@@ -421,54 +421,68 @@ section.work .section-title {
   justify-content: space-between;
 }
 
-    .section-link {
-      color: var(--muted);
-      font-size: 0.85rem;
-      white-space: nowrap;
-    }
+.section-link {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
+.section-link:hover {
+  color: #111;
+}
 
-    .card {
-      overflow: hidden;
-      border: 1px solid rgba(23, 23, 23, 0.08);
-      background: #fff;
-    }
-     .card-body {
-      padding: 14px 2px 0;
-    }
-    .card-body h3 {
-  font-size: 1.25rem !important;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px; /* 增加卡片间的间距 */
+}
+.card {
+  border: none !important; /* 移除多余边框 */
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+.card-body {
+  padding: 0 !important; /* 清除默认 padding 让文字对齐 */
+}
+
+.card-body h3 {
+  font-size: 1.3rem !important; /* 增大项目标题 */
   font-weight: 700 !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 8px !important;
   color: #111;
 }
 .card-body p {
   font-size: 0.95rem !important;
   line-height: 1.6;
-  color: var(--muted);
-  margin-bottom: 8px !important;
+  color: #666;
+  margin-bottom: 12px !important;
 }
-
 .meta {
-  font-weight: 600;
-  color: #8a8a8a !important;
+  font-size: 0.75rem !important;
+  font-weight: 700;
+  color: #a1a1aa !important; /* 柔和的灰色标签 */
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.75rem !important;
 }
-    .card-media {
-      aspect-ratio: 1.35 / 1;
-      padding: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--surface-soft);
-    }
+.card-media {
+  aspect-ratio: 16 / 10;
+  background: #f8f8f8; /* 浅灰色背景营造高级感 */
+  border-radius: 16px; /* 圆角与 About Me 的风格统一 */
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
     .project-card {
   display: block;
   text-decoration: none;
