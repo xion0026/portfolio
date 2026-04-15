@@ -504,7 +504,7 @@ section.work .section-title {
 
 .site-footer {
   background-color: #111111; 
-  padding: 100px 0 40px;
+  padding: 40px 0 40px;
   color: #ffffff;
 }
 .status-tag {
@@ -547,11 +547,14 @@ section.work .section-title {
 .footer-actions .btn-primary {
   background-color: #fff !important;
   color: #111 !important;
-  padding: 12px 28px;
+  padding: 8px 18px;
   font-size: 0.9rem;
   border-radius: 100px; /* 药丸形状按钮 */
 }
-
+.socials a {
+  margin-top: 10px;
+}
+。socials 
 .socials a {
   width: 44px;
   height: 44px;
