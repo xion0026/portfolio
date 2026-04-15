@@ -135,8 +135,8 @@
 
 /* --- hero --- */
     .hero {
-  padding-top: clamp(40px, 8vh, 80px);
-  padding-bottom: clamp(60px, 10vh, 100px);
+  padding-top: clamp(20px, 8vh, 40px);
+  padding-bottom: clamp(30px, 10vh, 50px);
 }
 
     .hero-grid {
@@ -278,7 +278,7 @@
       border-top: 1px solid rgba(23, 23, 23, 0.06);
     }
 section.about {
-  padding-top: clamp(60px, 10vh, 100px) !important;
+  padding-top: clamp(30px, 10vh, 50px) !important;
   padding-bottom: 30px !important; /* 显著缩短底部留白 */
   background-color: #fff;
 }
@@ -404,8 +404,8 @@ section.about {
 }
 /* --- Work Section --- */
 section.work {
-  padding-top: clamp(60px, 10vh, 100px) !important; 
-  padding-bottom: clamp(60px, 10vh, 100px) !important;
+  padding-top: clamp(30px, 10vh, 50px) !important; 
+  padding-bottom: clamp(30px, 10vh, 50px) !important;
   background-color: var(--surface);
 }
 section.work .section-title {
@@ -447,11 +447,11 @@ section.work .section-title {
   transform: translateY(-8px);
 }
 .card-body {
-  padding: 0 !important; /* 清除默认 padding 让文字对齐 */
+  padding: 0 !important; 
 }
 
 .card-body h3 {
-  font-size: 1.3rem !important; /* 增大项目标题 */
+  font-size: 1.3rem !important; 
   font-weight: 700 !important;
   margin-bottom: 8px !important;
   color: #111;
@@ -465,14 +465,14 @@ section.work .section-title {
 .meta {
   font-size: 0.75rem !important;
   font-weight: 700;
-  color: #a1a1aa !important; /* 柔和的灰色标签 */
+  color: #a1a1aa !important; 
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 .card-media {
   aspect-ratio: 16 / 10;
-  background: #f8f8f8; /* 浅灰色背景营造高级感 */
-  border-radius: 16px; /* 圆角与 About Me 的风格统一 */
+  background: #f8f8f8; 
+  border-radius: 16px; 
   overflow: hidden;
   margin-bottom: 20px;
   border: 1px solid rgba(0,0,0,0.03);
