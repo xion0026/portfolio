@@ -57,14 +57,14 @@
 
     .page-shell {
       width: min(calc(100% - 16px), 1240px);
-      margin: 10px auto;
+      margin: 5px auto;
       background: rgba(255, 255, 255, 0.4);
       border: 1px solid rgba(23, 23, 23, 0.06);
       box-shadow: var(--shadow);
     }
 
     .site-header {
-      padding: 20px 0;
+      padding: 12px 0 0;
     }
 
     .site-header .container,
@@ -163,7 +163,7 @@
 
 /* --- Hero --- */
 .hero {
-  padding-top: clamp(10px, 8vh, 20px);
+  padding-top: 0;
   width: 100%;
   background: 
     radial-gradient(circle at 75% 35%, rgba(255,255,255,0.3) 0%, transparent 25%),
@@ -178,19 +178,20 @@
     }
 
 .hero-grid-layout {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr; /* 调整比例：文字窄，图片宽 */
-  gap: 40px; /* 增加文字和图片之间的距离，增加呼吸感 */
-  align-items: center;
-  min-height: 70vh; /* 设置最小高度为 70% 视口高度，让背景足够大 */
-  padding: 40px 4%; /* 使用百分比 padding 确保平滑 */
+ display: grid;
+  grid-template-columns: 0.8fr 1.2fr; 
+  gap: 40px;
+  /* 将 center 改为 flex-start 或稍微向上偏移 */
+  align-items: center; 
+  min-height: 500px; /* 减小最小高度，防止强制拉伸 */
+  padding: 40px 4% 60px; /* 减少顶部的 40px，增加底部的呼吸感 */
 }
   h1.hero-title {
-  max-width: 14ch;
-  font-size: clamp(2.4rem, 5vw, 3.6rem); 
+  max-width: 12ch; /* 缩短限制，确保 Cheetah 和 Networks 在两行 */
+  font-size: clamp(2rem, 5vw, 3.2rem); 
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 30px; 
+  line-height: 1.05;
+  margin-bottom: 20px; 
 }
 .hero-copy {
   padding: 8px 0;
@@ -221,20 +222,19 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(46, 34, 25, 0.06) 100%);
 }
 .cheetah-image {
-  width: 120%;
-  height: 120%;
+  width: 100%;
   display: flex;
-  justify-content: flex-end; /* 图片靠右对齐 */
+  justify-content: flex-end;
   align-items: center;
+  overflow: visible; /* 允许图片溢出容器 */
 }
 
 .cheetah-image img {
-  width: 120%; /* 稍微超出容器一点点，增加视觉冲击力 */
-  max-width: 1000px; /* 设定一个更大的最大宽度限制 */
+  width: 140%; /* 显著加大，从 120% 增加到 140% */
+  max-width: none; /* 解除 1000px 限制，让它在宽屏上更震撼 */
   height: auto;
-  border-radius: 0;
-  transform: translateX(10%); /* 向右稍微偏移，让样机延伸到屏幕边缘 */
-  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.12));
+  transform: translateX(15%) translateY(-10px); /* 向右偏移 15%，向上轻微修正位置 */
+  filter: drop-shadow(0 40px 80px rgba(67, 106, 138, 0.2)); /* 加深投影增加立体感 */
 }
 /* --- 响应式适配 --- */
 @media (max-width: 1024px) {
