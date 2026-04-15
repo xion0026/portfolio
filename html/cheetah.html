@@ -141,26 +141,75 @@
       font-size: 0.84rem;
       font-weight: 600;
     }
-
+/* --- Hero --- */
     .hero {
       padding: 20px 0 36px;
     }
 
     .hero-grid {
-      display: grid;
+      position: relative;
       grid-template-columns: 1fr 1.1fr;
       gap: 32px;
-      align-items: center;
-      min-height: 420px;
+      align-items: stretch;
+      min-height: 520px;
+      padding: 0 22px;
+      border: 1px solid rgba(112, 164, 205, 0.22);
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(219, 238, 252, 0.96) 38%, rgba(198, 224, 246, 0.98) 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.65),
+        0 26px 56px rgba(90, 131, 171, 0.14);
+    }
+     .hero-grid::before,
+    .hero-grid::after {
+      content: "";
+      position: absolute;
+      inset: auto;
+      pointer-events: none;
+    }
+ .hero-grid::before {
+      top: -120px;
+      right: -40px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 68%);
+      opacity: 0.9;
     }
 
+    .hero-grid::after {
+      inset: 0;
+      background:
+        linear-gradient(115deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 34%),
+        repeating-linear-gradient(90deg, rgba(110, 157, 197, 0.09) 0 1px, transparent 1px 92px),
+        repeating-linear-gradient(0deg, rgba(110, 157, 197, 0.06) 0 1px, transparent 1px 92px);
+      opacity: 0.6;
+    }
+ .hero-copy {
+      padding: 56px 18px 60px;
+    }
+    .hero-copy,
+    .hero-visual {
+      position: relative;
+      z-index: 1;
+    }
     .eyebrow {
       margin: 0 0 18px;
-      color: #888076;
+      color: #587a96;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+    }
+     .hero-copy p:not(.eyebrow) {
+      max-width: 44ch;
+      margin-top: 18px;
+      color: var(--muted);
+      color: #496173;
+      font-size: 0.98rem;
+      line-height: 1.75;
     }
 
     h1, h2, h3, p {
@@ -379,7 +428,7 @@
           </div>
         </div>
       </section>
-
+<!-- Background -->
       <section class="section">
         <div class="container grid-2">
           <div>
