@@ -57,21 +57,44 @@
       margin: 0 auto;
     }
 
-    .page-shell {
-      width: min(calc(100% - 16px), 1240px);
-      margin: 10px auto;
-      background: rgba(255, 255, 255, 0.4);
-      border: 1px solid rgba(23, 23, 23, 0.06);
-      box-shadow: var(--shadow);
-    }
+    .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 12px;
+  background-color: var(--dark); 
+  color: #ffffff !important; 
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
 
-    .site-header {
-      padding: 14px 0 8px;
-    }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-    .site-header .container,
-    .footer-top,
-    .footer-bottom {
+/* --- Header --- */
+.site-header {
+  padding: 14px 0;
+  background-color: #ffffff; /* 确保 header 背景是纯白 */
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+    .site-header .container {
       display: grid;
       gap: 24px;
     }
@@ -80,13 +103,6 @@
       grid-template-columns: auto 1fr;
       align-items: center;
     }
-/* --- Header --- */
-.header-wrap {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  padding: 10px 0;
-}
 
 .brand-group {
   display: flex;
@@ -103,25 +119,7 @@
   height: 120px; 
   width: auto;
 }
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0 24px;
-  border-radius: 12px;
-  background-color: var(--dark); 
-  color: #ffffff !important; 
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-.btn-primary:hover {
-  transform: translateY(-2px);
-  background-color: #333; /* 悬停稍微变浅 */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+
     .nav {
       display: flex;
       justify-content: flex-end;
@@ -158,37 +156,33 @@
 
 
 /* --- Hero --- */
-
 .hero {
   padding: 0; 
   width: 100%;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 40px;
-  align-items: center;
-  min-height: 600px;
-  padding: 60px 5%;
-  border-radius: 0;
-  border: none;
-  background:
-    repeating-linear-gradient(90deg, rgba(108, 150, 188, 0.05) 0 1px, transparent 1px 40px),
-    repeating-linear-gradient(0deg, rgba(108, 150, 188, 0.05) 0 1px, transparent 1px 40px),
+  background: 
+    radial-gradient(circle at 75% 35%, rgba(255,255,255,0.3) 0%, transparent 25%),
     linear-gradient(135deg, #e8f3fd 0%, #d8ebfb 100%);
-  box-shadow: none;
+  position: relative;
+  overflow: hidden;
 }
-
-.hero-grid::before,
-.hero-grid::after {
-  display: none;
+.hero .container {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+.hero-grid-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr; /* 调整比例：文字窄，图片宽 */
+  gap: 60px; /* 增加文字和图片之间的距离，增加呼吸感 */
+  align-items: center;
+  min-height: 70vh; /* 设置最小高度为 70% 视口高度，让背景足够大 */
+  padding: 80px 8%; /* 使用百分比 padding 确保平滑 */
 }
 
 .hero-copy,
 .hero-image {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .hero-copy {
@@ -205,47 +199,74 @@
 }
 
 .hero-copy h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem); 
-  max-width: 12ch; 
+  /* 缩小字号，使其协调 */
+  font-size: clamp(2rem, 4.5vw, 3rem); 
+  line-height: 1.1; /* 增加行高，不那么拥挤 */
+  letter-spacing: -0.04em;
   margin-bottom: 24px;
   font-weight: 800;
+  color: #1a1a1a;
+  max-width: 100%; /* 标题不再被限制字符数 */
 }
 
 .hero-copy p {
-  max-width: 46ch;
+  font-size: 1.1rem;
   color: #526b80;
-  line-height: 1.75;
+  line-height: 1.7;
+  margin-bottom: 12px;
 }
 
 .hero-meta {
-  margin-top: 18px;
   color: #647f94;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end; /* 靠右对齐 */
+  justify-content: flex-end; /* 图片靠右对齐 */
+  align-items: center;
 }
 
 .hero-image img {
-  width: 110%; 
-  max-width: none; 
-  transform: translateX(5%); 
+  width: 110%; /* 稍微超出容器一点点，增加视觉冲击力 */
+  max-width: 1000px; /* 设定一个更大的最大宽度限制 */
+  height: auto;
+  border-radius: 0;
+  transform: translateX(10%); /* 向右稍微偏移，让样机延伸到屏幕边缘 */
   filter: drop-shadow(0 30px 60px rgba(0,0,0,0.12));
 }
-
-@media (max-width: 900px) {
-  .hero-grid {
+/* --- 响应式适配 --- */
+@media (max-width: 1024px) {
+  .hero-grid-layout {
     grid-template-columns: 1fr;
-    padding: 28px 20px 0;
+    padding: 60px 5% 0; /* 手机端顶部Padding小一些，底部不留白 */
+    text-align: center;
+  }
+  .hero-copy h1 {
+    font-size: 2.2rem;
+  }
+  .hero-image {
+    margin-top: 40px;
+    justify-content: center;
+  }
+  .hero-image img {
+    width: 100%;
+    transform: none; /* 手机端居中，不偏移 */
+    max-width: 500px;
   }
 }
 
 /* --- background -- */
 
+    .page-shell {
+      width: min(calc(100% - 16px), 1240px);
+      margin: 10px auto;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(23, 23, 23, 0.06);
+      box-shadow: var(--shadow);
+    }
     .section {
       background: var(--surface);
       border-top: 1px solid rgba(23, 23, 23, 0.06);
@@ -326,7 +347,11 @@
       color: var(--muted);
       font-size: 0.88rem;
     }
-
+    .footer-top,
+    .footer-bottom {
+      display: grid;
+      gap: 24px;
+    }
     .site-footer {
       background: var(--dark);
       color: #fff;
@@ -393,8 +418,6 @@
   </style>
 </head>
 <body>
-  <div class="page-shell">
-
     <!-- header -->
     <header class="site-header">
   <div class="container header-wrap">
@@ -411,8 +434,7 @@
       <a class="btn-primary nav-cta" href="../index.html#contact">Let's Work Together</a>
     </nav>
   </div>
-</header>
-    <main>
+</header>  
        <!-- hero -->
       <section class="hero">
         <div class="container hero-grid">
@@ -430,6 +452,8 @@
           </div>
         </div>
       </section>
+    <div class="page-shell">
+      <main>
 <!-- Background -->
       <section class="section">
         <div class="container grid-2">
@@ -600,6 +624,6 @@
         </div>
       </div>
     </footer>
-  </div>
+  </div>   
 </body>
 </html>
