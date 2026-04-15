@@ -504,22 +504,35 @@ section.work .section-title {
 
 .site-footer {
   background-color: #111111; 
-  padding: 100px 0 40px; 
+  padding: 100px 0 40px;
   color: #ffffff;
+}
+.status-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #a855f7; 
+  margin-bottom: 16px;
 }
 .footer-copy h2 {
   font-size: 2.2rem !important;
   font-weight: 800 !important;
   letter-spacing: -0.03em;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
-
 .footer-copy p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  max-width: 40ch;
-  opacity: 0.6; 
+  opacity: 0.6;
   font-weight: 400;
+  line-height: 1.7;
+}
+.btn-cta-footer {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border-radius: 100px !important;
+  padding: 14px 32px !important;
+  font-size: 0.9rem !important;
 }
     .site-footer .container {
       padding: 34px 0 16px;
@@ -538,42 +551,32 @@ section.work .section-title {
   font-size: 0.9rem;
   border-radius: 100px; /* 药丸形状按钮 */
 }
-    .socials {
-      display: flex;
-      gap: 10px;
-    }
 
 .socials a {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* 细微描边 */
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   background: transparent;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials a:hover {
-  background: #fff;
-  color: #111;
-  border-color: #fff;
-  transform: translateY(-3px);
-}
-
-.status-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #a855f7; /* 使用你设计词汇的粉紫色 */
-  margin-bottom: 12px;
-  font-weight: 700;
+  background-color: #ffffff;
+  color: #111111;
+  transform: translateY(-4px);
 }
 .footer-bottom {
   margin-top: 80px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.8rem;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
   opacity: 0.4;
+  font-size: 0.75rem;
 }
 
     @media (max-width: 960px) {
