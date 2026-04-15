@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
-    :root {
+:root {
       --bg: #f3efe9;
       --surface: #ffffff;
       --surface-soft: #f8f5f1;
@@ -17,13 +17,13 @@
       --muted: #626262;
       --line: #ddd6cf;
       --dark: #1d1d1d;
+      --dark-soft: #262626;
       --shadow: 0 22px 50px rgba(0, 0, 0, 0.08);
       --radius-lg: 26px;
       --radius-md: 18px;
       --radius-sm: 12px;
       --max: 1160px;
     }
-
     * {
       box-sizing: border-box;
     }
@@ -34,7 +34,7 @@
 
     body {
       margin: 0;
-      font-family: "Inter", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: var(--text);
       background:
         radial-gradient(circle at top center, rgba(255, 255, 255, 0.72), transparent 38%),
@@ -49,52 +49,30 @@
     img {
         max-width: 100%;
   display: block;
-  border-radius: 0;
     }
-
-    .container {
+  .container {
       width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
     }
 
-    .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0 24px;
-  border-radius: 12px;
-  background-color: var(--dark); 
-  color: #ffffff !important; 
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  background-color: #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+    .page-shell {
+      width: min(calc(100% - 16px), 1240px);
+      margin: 10px auto;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(23, 23, 23, 0.06);
+      box-shadow: var(--shadow);
+    }
 
 /* --- Header --- */
-.site-header {
-  padding: 14px 0;
-  background-color: #ffffff; /* 确保 header 背景是纯白 */
-  width: 100%;
-  position: relative;
-  z-index: 100;
-}
-.header-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .site-header {
+      padding: 20px 0;
+    }
 
-
-    .site-header .container {
+    .site-header .container,
+    .hero-grid,
+    .about-grid,
+    .footer-top,
+    .footer-bottom {
       display: grid;
       gap: 24px;
     }
@@ -103,6 +81,12 @@
       grid-template-columns: auto 1fr;
       align-items: center;
     }
+.header-wrap {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 0;
+}
 
 .brand-group {
   display: flex;
@@ -119,8 +103,9 @@
   height: 120px; 
   width: auto;
 }
+/* --- nav --- */
 
-    .nav {
+ .nav {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -146,18 +131,21 @@
       width: 100%;
       height: 1px;
       background: var(--text);
-    }
-
-   .nav-cta {
+  
+}
+.nav-cta {
   min-height: 38px;
   padding: 0 16px;
-  font-size: 0.82rem;
-}
+  font-size: 0.82rem; }
+    .section-title{
+      margin-top: 10;
+    }
+
 
 
 /* --- Hero --- */
 .hero {
-  padding: 0; 
+  padding-top: clamp(20px, 8vh, 40px);
   width: 100%;
   background: 
     radial-gradient(circle at 75% 35%, rgba(255,255,255,0.3) 0%, transparent 25%),
@@ -165,11 +153,12 @@
   position: relative;
   overflow: hidden;
 }
-.hero .container {
-  max-width: none;
-  width: 100%;
-  padding: 0;
-}
+.hero-grid {
+      grid-template-columns: 1fr 1.05fr;
+      align-items: end;
+      min-height: 520px;
+    }
+
 .hero-grid-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr; /* 调整比例：文字窄，图片宽 */
@@ -178,8 +167,14 @@
   min-height: 70vh; /* 设置最小高度为 70% 视口高度，让背景足够大 */
   padding: 80px 8%; /* 使用百分比 padding 确保平滑 */
 }
+  h1.hero-title {
+  max-width: 14ch;
+  font-size: clamp(2.4rem, 5vw, 3.6rem); 
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 30px; 
+}
 
-.hero-copy,
 .hero-image {
   position: relative;
   z-index: 10;
@@ -198,17 +193,6 @@
   text-transform: uppercase;
 }
 
-.hero-copy h1 {
-  /* 缩小字号，使其协调 */
-  font-size: clamp(2rem, 4.5vw, 3rem); 
-  line-height: 1.1; /* 增加行高，不那么拥挤 */
-  letter-spacing: -0.04em;
-  margin-bottom: 24px;
-  font-weight: 800;
-  color: #1a1a1a;
-  max-width: 100%; /* 标题不再被限制字符数 */
-}
-
 .hero-copy p {
   font-size: 1.1rem;
   color: #526b80;
@@ -220,8 +204,18 @@
   color: #647f94;
   font-size: 0.95rem;
 }
-
-.hero-image {
+   .hero-visual {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 45% 12%, rgba(255, 255, 255, 0.9), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(46, 34, 25, 0.06) 100%);
+}
+.cheetah-image {
   width: 100%;
   height: 100%;
   display: flex;
@@ -229,7 +223,7 @@
   align-items: center;
 }
 
-.hero-image img {
+.cheetah-image img {
   width: 110%; /* 稍微超出容器一点点，增加视觉冲击力 */
   max-width: 1000px; /* 设定一个更大的最大宽度限制 */
   height: auto;
@@ -247,11 +241,11 @@
   .hero-copy h1 {
     font-size: 2.2rem;
   }
-  .hero-image {
+  .cheetah-image {
     margin-top: 40px;
     justify-content: center;
   }
-  .hero-image img {
+  .cheetah-image img {
     width: 100%;
     transform: none; /* 手机端居中，不偏移 */
     max-width: 500px;
@@ -418,6 +412,7 @@
   </style>
 </head>
 <body>
+  <div class="page-shell">
     <!-- header -->
     <header class="site-header">
   <div class="container header-wrap">
@@ -435,24 +430,53 @@
     </nav>
   </div>
 </header>  
+
+  <!-- hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-title">
+            <h1 class="hero-title">
+  Where 
+  <span class="text-design" data-tag="design">product empathy</span> 
+  meets 
+  <span class="text-code" data-tag="code">pixel-perfect code</span>
+</h1>
+            <p>
+              I'm Melinda, a Design Engineer specializing in designing intentional user interfaces and converting complex designs into clean, scalable front-end architecture and production-ready code. I connect the gap between Figma and the browser. I don't just hand over unchanging mocks; I deliver experiences.
+            <div class="hero-actions">
+              <a class="btn-primary" href="#work">View My Work</a>
+              <a class="btn-primary" href="mailto:yingxinxiong1@gmail.com">Get In Touch →</a>
+            </div>
+          </div> 
+           <div class="hero-visual">
+        <div class="portrait-wrap">
+    <img src="images/melinda2.svg" alt="Portrait of Melinda Xiong" class="portrait-image">
+  </div>
+</div>
+
+
+        </div>
+      </section>
+
+
        <!-- hero -->
       <section class="hero">
         <div class="container hero-grid">
-          <div class="hero-copy">
+          <div class="hero-title">
             <p class="eyebrow">UI/UX • Web Redesign</p>
-            <h1>Cheetah Networks Website Redesign</h1>
+            <h1 class="hero-title"><span class="text-design" data-tag="design">Cheetah Networks</span> Website Redesign</h1>
             <p>
               Designed a B2B telecom website to improve clarity, highlight key offerings, and create a more engaging user journey.
             </p>
             <p class="hero-meta">Design Engineer (UX/UI + Frontend Strategy) • 2024 • Figma, CSS Architecture, Responsive Systems</p>
           </div>
 
-          <div class="hero-image">
-            <img src="../images/cheetahcase.svg" alt="Cheetah Networks website">
+          <div class="hero-visual">
+            <img src="../images/cheetahcase.svg" alt="Cheetah Networks website" class="cheetah-image">
           </div>
         </div>
       </section>
-    <div class="page-shell">
+    
       <main>
 <!-- Background -->
       <section class="section">
