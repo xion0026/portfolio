@@ -549,12 +549,8 @@ section.work .section-title {
   color: #111 !important;
   padding: 8px 18px;
   font-size: 0.9rem;
-  border-radius: 100px; /* 药丸形状按钮 */
+  border-radius: 100px; 
 }
-.socials a {
-  margin-top: 10px;
-}
-。socials 
 .socials a {
   width: 44px;
   height: 44px;
@@ -573,8 +569,8 @@ section.work .section-title {
   transform: translateY(-4px);
 }
 .footer-bottom {
-  margin-top: 80px;
-  padding-top: 32px;
+  margin-top: 40px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
