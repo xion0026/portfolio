@@ -45,12 +45,12 @@
       color: inherit;
       text-decoration: none;
     }
-
     img {
-        max-width: 100%;
-  display: block;
+      max-width: 100%;
+      display: block;
     }
-  .container {
+
+    .container {
       width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
     }
@@ -63,7 +63,6 @@
       box-shadow: var(--shadow);
     }
 
-/* --- Header --- */
     .site-header {
       padding: 20px 0;
     }
@@ -81,6 +80,28 @@
       grid-template-columns: auto 1fr;
       align-items: center;
     }
+    .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 12px;
+  background-color: var(--dark); /* 黑色背景 */
+  color: #ffffff !important; /* 白色文字 */
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+/* --- Header --- */
 .header-wrap {
   display: flex;
   justify-content: space-between; 
@@ -104,8 +125,7 @@
   width: auto;
 }
 /* --- nav --- */
-
- .nav {
+    .nav {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -140,7 +160,6 @@
     .section-title{
       margin-top: 10;
     }
-
 
 
 /* --- Hero --- */
@@ -430,35 +449,6 @@
     </nav>
   </div>
 </header>  
-
-  <!-- hero -->
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-title">
-            <h1 class="hero-title">
-  Where 
-  <span class="text-design" data-tag="design">product empathy</span> 
-  meets 
-  <span class="text-code" data-tag="code">pixel-perfect code</span>
-</h1>
-            <p>
-              I'm Melinda, a Design Engineer specializing in designing intentional user interfaces and converting complex designs into clean, scalable front-end architecture and production-ready code. I connect the gap between Figma and the browser. I don't just hand over unchanging mocks; I deliver experiences.
-            <div class="hero-actions">
-              <a class="btn-primary" href="#work">View My Work</a>
-              <a class="btn-primary" href="mailto:yingxinxiong1@gmail.com">Get In Touch →</a>
-            </div>
-          </div> 
-           <div class="hero-visual">
-        <div class="portrait-wrap">
-    <img src="images/melinda2.svg" alt="Portrait of Melinda Xiong" class="portrait-image">
-  </div>
-</div>
-
-
-        </div>
-      </section>
-
-
        <!-- hero -->
       <section class="hero">
         <div class="container hero-grid">
