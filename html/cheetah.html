@@ -80,27 +80,6 @@
       grid-template-columns: auto 1fr;
       align-items: center;
     }
-    .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0 24px;
-  border-radius: 12px;
-  background-color: var(--dark); /* 黑色背景 */
-  color: #ffffff !important; /* 白色文字 */
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  background-color: #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
 /* --- Header --- */
 .header-wrap {
   display: flex;
@@ -160,11 +139,31 @@
     .section-title{
       margin-top: 10;
     }
+ .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 12px;
+  background-color: var(--dark); 
+  color: #ffffff !important; 
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
 
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
 /* --- Hero --- */
 .hero {
-  padding-top: clamp(20px, 8vh, 40px);
+  padding-top: clamp(10px, 8vh, 20px);
   width: 100%;
   background: 
     radial-gradient(circle at 75% 35%, rgba(255,255,255,0.3) 0%, transparent 25%),
@@ -175,16 +174,16 @@
 .hero-grid {
       grid-template-columns: 1fr 1.05fr;
       align-items: end;
-      min-height: 520px;
+      min-height: 500px;
     }
 
 .hero-grid-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr; /* 调整比例：文字窄，图片宽 */
-  gap: 60px; /* 增加文字和图片之间的距离，增加呼吸感 */
+  gap: 40px; /* 增加文字和图片之间的距离，增加呼吸感 */
   align-items: center;
   min-height: 70vh; /* 设置最小高度为 70% 视口高度，让背景足够大 */
-  padding: 80px 8%; /* 使用百分比 padding 确保平滑 */
+  padding: 40px 4%; /* 使用百分比 padding 确保平滑 */
 }
   h1.hero-title {
   max-width: 14ch;
@@ -193,12 +192,6 @@
   line-height: 1.1;
   margin-bottom: 30px; 
 }
-
-.hero-image {
-  position: relative;
-  z-index: 10;
-}
-
 .hero-copy {
   padding: 8px 0;
 }
@@ -210,13 +203,6 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.hero-copy p {
-  font-size: 1.1rem;
-  color: #526b80;
-  line-height: 1.7;
-  margin-bottom: 12px;
 }
 
 .hero-meta {
@@ -235,15 +221,15 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(46, 34, 25, 0.06) 100%);
 }
 .cheetah-image {
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   display: flex;
   justify-content: flex-end; /* 图片靠右对齐 */
   align-items: center;
 }
 
 .cheetah-image img {
-  width: 110%; /* 稍微超出容器一点点，增加视觉冲击力 */
+  width: 120%; /* 稍微超出容器一点点，增加视觉冲击力 */
   max-width: 1000px; /* 设定一个更大的最大宽度限制 */
   height: auto;
   border-radius: 0;
@@ -257,7 +243,7 @@
     padding: 60px 5% 0; /* 手机端顶部Padding小一些，底部不留白 */
     text-align: center;
   }
-  .hero-copy h1 {
+  .hero-title h1 {
     font-size: 2.2rem;
   }
   .cheetah-image {
