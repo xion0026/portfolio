@@ -302,6 +302,37 @@
       color: var(--muted);
       line-height: 1.7;
     }
+    .background-image-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-md); /* 保持圆角一致 */
+}
+
+/* 创建渐变蒙版 */
+.background-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* 铺满整个容器 */
+  
+  /* 你的 135deg 渐变色 */
+  background: linear-gradient(135deg, #e8f3fd 0%, #d8ebfb 100%);
+  
+  /* 关键：调整透明度，让底下的图片透出来 */
+  /* 建议 0.4 - 0.7 之间，取决于你想要多强的“融入感” */
+  opacity: 0.6; 
+  
+  /* 混合模式：让渐变色与图片的明暗融合，这比单纯透明更高级 */
+  mix-blend-mode: multiply; 
+  
+  pointer-events: none; /* 确保不影响鼠标点击图片 */
+}
+
+.background-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 /*  Problem  */
 .section-problem {
@@ -523,6 +554,8 @@
 
 /* Mobile Responsiveness */
 
+
+
     .tag {
       display: inline-block;
       margin-top: 14px;
@@ -682,8 +715,8 @@
             </div>
           </div>
 
-          <div class="image-block">
-            <img src="../images/background.png" alt="Original Cheetah Networks website">
+          <div class="image-block background-image-wrap">
+            <img src="../images/background.jpg" alt="Original Cheetah Networks website">
           </div>
         </div>
       </section>
@@ -736,6 +769,7 @@
         <div class="icon-card"><img src="../images/wireless-network-icon (1).png" alt="Global"><span>Wireless-network.svg</span></div>
         <div class="icon-card"><img src="../images/dumper (1).png" alt="Security"><span>Dumper.svg</span></div>
         <div class="icon-card"><img src="../images/oil-pump.png" alt="Security"><span>Oil-pump.svg</span></div>
+        <div class="icon-card"><img src="../images/tower.png" alt="Security"><span>Tower.svg</span></div>
         </div>
 
       <div class="icon-specs">
