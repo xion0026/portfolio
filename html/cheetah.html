@@ -309,6 +309,104 @@
       color: var(--muted);
       line-height: 1.7;
     }
+/* --- Icon System Section --- */
+.icon-system {
+  background-color: #f9fbfd; /* Very light tech-blue background */
+  padding: 100px 0;
+}
+
+/* The Grid Display */
+.icon-grid-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid rgba(108, 150, 188, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+}
+
+/* Individual Icon Card */
+.icon-card {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: crosshair; /* Engineering feel */
+}
+
+.icon-card img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  /* Optional: Forces a specific brand color if SVGs are black */
+  filter: brightness(0) saturate(100%) invert(36%) sepia(85%) saturate(1048%) hue-rotate(178deg) brightness(92%) contrast(92%);
+}
+
+.icon-card span {
+  font-size: 10px;
+  font-family: 'Courier New', monospace; /* Developer aesthetic */
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+
+/* Hover States */
+.icon-card:hover {
+  background: #f0f7ff;
+  border-color: #1081cb;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.icon-card:hover img {
+  filter: none; /* Shows original color or keep it themed */
+}
+
+/* Specification Text */
+.icon-specs {
+  padding-left: 50px;
+}
+
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.spec-list li {
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  padding-left: 30px;
+  position: relative;
+}
+
+.spec-list li::before {
+  content: "✦"; /* Matching your homepage motif */
+  position: absolute;
+  left: 0;
+  color: #1081cb;
+  font-size: 0.8rem;
+}
+
+.spec-list li strong {
+  display: block;
+  color: #111;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .icon-specs { padding-left: 0; margin-top: 50px; }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
 
     .tag {
       display: inline-block;
@@ -488,29 +586,47 @@
           </div>
         </div>
       </section>
-      <!-- Approach -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Designing a Cohesive Iconography System - UI Design</h2>
-          <p class="section-intro">
-      By integrating a cohesive iconography system, I simplified the narrative around Cheetah's technical infrastructure, transforming technical specs into tangible business value.
-    </p>
-          <div class="grid-3">
-            <div class="card">
-              <h3>Simplified Architecture</h3>
-              <p>Reorganized content so users could understand the business faster.</p>
-            </div>
-            <div class="card">
-              <h3>Clear Hierarchy</h3>
-              <p>Used stronger spacing, headings, and grouping to improve readability.</p>
-            </div>
-            <div class="card">
-              <h3>Modular Layout</h3>
-              <p>Introduced flexible card-based sections to support future content growth.</p>
-            </div>
-          </div>
+      <!-- UI -->
+      <section class="section icon-system">
+  <div class="container">
+    <div class="grid-2">
+      <div class="icon-grid-display">
+        <div class="icon-card"><img src="../images/quality.svg" alt="Quality"><span>quality.svg</span></div>
+        <div class="icon-card"><img src="../images/Insight-Actionable (1).svg" alt="Speed"><span>speed.svg</span></div>
+        <div class="icon-card"><img src="../images/icons/security.svg" alt="Security"><span>security.svg</span></div>
+        <div class="icon-card"><img src="../images/Isolate-network-issues (1).svg" alt="Reliability"><span>reliability.svg</span></div>
+        <div class="icon-card"><img src="../images/optimize-IoT-network.svg" alt="Analytics"><span>analytics.svg</span></div>
+        <div class="icon-card"><img src="../images/design-services-icon.png" alt="Cloud"><span>cloud.svg</span></div>
+        <div class="icon-card"><img src="../images/IoT-consulting-icon.png" alt="Network"><span>network.svg</span></div>
+        <div class="icon-card"><img src="../images/network-Characterization-icon.png" alt="Data"><span>data.svg</span></div>
+        <div class="icon-card"><img src="../images/testing-icon (1).png" alt="Support"><span>support.svg</span></div>
+        <div class="icon-card"><img src="../images/wireless-network-icon (1).png" alt="Global"><span>global.svg</span></div>
         </div>
-      </section>
+
+      <div class="icon-specs">
+        <h2 class="section-title">Iconography System</h2>
+        <p class="section-intro">
+          To harmonize the visual language of Cheetah Networks, I developed a custom library of 24+ vector icons. These serve as visual anchors, helping users navigate complex telecom data with ease.
+        </p>
+        
+        <ul class="spec-list">
+          <li>
+            <strong>Grid-Based Geometry</strong>
+            Built on a strict 24px organic grid to ensure pixel-perfect rendering across all screen densities.
+          </li>
+          <li>
+            <strong>Weight Consistency</strong>
+            A uniform 2px stroke weight provides a modern, balanced "tech" aesthetic while maintaining high legibility.
+          </li>
+          <li>
+            <strong>Semantic Design</strong>
+            Each metaphor was carefully chosen to simplify high-level technical concepts into intuitive visual cues.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Design-to-Code -->
       <section class="section">
         <div class="container">
