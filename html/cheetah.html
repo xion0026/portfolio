@@ -259,17 +259,10 @@
 
 /* --- background -- */
 
-    .page-shell {
-      width: min(calc(100% - 16px), 1240px);
-      margin: 10px auto;
-      background: rgba(255, 255, 255, 0.4);
-      border: 1px solid rgba(23, 23, 23, 0.06);
-      box-shadow: var(--shadow);
-    }
     .section {
       background: var(--surface);
       border-top: 1px solid rgba(23, 23, 23, 0.06);
-      padding: 48px 0;
+      padding: 24px 0;
     }
 
     .section-title {
@@ -311,15 +304,6 @@
     }
 
 /*  Problem  */
-.section-full-width {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 100px 0; /* 增加上下 Padding，增加呼吸感 */
-}
 .section-problem {
   /* 1. 科技感淡蓝灰色全屏填充，使用类似 Hero 的网格科技感，但颜色更冷静 */
   background: 
@@ -445,10 +429,10 @@
 /* --- Icon System Section --- */
 .icon-system {
   background-color: #f9fbfd; /* Very light tech-blue background */
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
-/* The Grid Display */
+
 .icon-grid-display {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
@@ -460,7 +444,6 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
 }
 
-/* Individual Icon Card */
 .icon-card {
   aspect-ratio: 1 / 1;
   display: flex;
@@ -488,7 +471,6 @@
   letter-spacing: 0.02em;
 }
 
-/* Hover States */
 .icon-card:hover {
   background: #f0f7ff;
   border-color: #1081cb;
@@ -499,7 +481,6 @@
   filter: none; /* Shows original color or keep it themed */
 }
 
-/* Specification Text */
 .icon-specs {
   padding-left: 50px;
 }
@@ -512,9 +493,9 @@
 
 .spec-list li {
   margin-bottom: 24px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: #2f343c;
   padding-left: 30px;
   position: relative;
 }
@@ -523,7 +504,7 @@
   content: "✦"; /* Matching your homepage motif */
   position: absolute;
   left: 0;
-  color: #1081cb;
+  color: #0e69a5;
   font-size: 0.8rem;
 }
 
@@ -540,6 +521,7 @@
   .grid-2 { grid-template-columns: 1fr; }
 }
 
+/* Mobile Responsiveness */
 
     .tag {
       display: inline-block;
@@ -712,7 +694,7 @@
       <span class="status-tag status-problem">✦ The Diagnostic View</span>
       <h2 class="section-title">Identifying Core Challenges</h2>
       <p class="section-intro">
-        Analyzing the legacy platform's data and user journey, we identified critical friction points that inhibited user trust and conversion.
+       By analyzing the legacy platform's data and user journey, we identified critical friction points that hindered end-user trust and conversion.
       </p>
 
       <div class="card problem-card-modern">
@@ -727,7 +709,7 @@
           </li>
           <li>
             <strong>Responsive Debt</strong>
-            <p>The platform lacked agility on mobile devices, failing modern SEO and Core Web Vitals standards.</p>
+            <p>The platform lacked mobile agility and failed to fulfill modern SEO and Core Web Vitals standards.</p>
           </li>
           <li>
             <strong>Brand Misalignment</strong>
@@ -743,16 +725,17 @@
   <div class="container">
     <div class="grid-2">
       <div class="icon-grid-display">
-        <div class="icon-card"><img src="../images/quality.svg" alt="Quality"><span>quality.svg</span></div>
-        <div class="icon-card"><img src="../images/Insight-Actionable (1).svg" alt="Speed"><span>speed.svg</span></div>
-        <div class="icon-card"><img src="../images/icons/security.svg" alt="Security"><span>security.svg</span></div>
-        <div class="icon-card"><img src="../images/Isolate-network-issues (1).svg" alt="Reliability"><span>reliability.svg</span></div>
-        <div class="icon-card"><img src="../images/optimize-IoT-network.svg" alt="Analytics"><span>analytics.svg</span></div>
-        <div class="icon-card"><img src="../images/design-services-icon.png" alt="Cloud"><span>cloud.svg</span></div>
-        <div class="icon-card"><img src="../images/IoT-consulting-icon.png" alt="Network"><span>network.svg</span></div>
-        <div class="icon-card"><img src="../images/network-Characterization-icon.png" alt="Data"><span>data.svg</span></div>
-        <div class="icon-card"><img src="../images/testing-icon (1).png" alt="Support"><span>support.svg</span></div>
-        <div class="icon-card"><img src="../images/wireless-network-icon (1).png" alt="Global"><span>global.svg</span></div>
+        <div class="icon-card"><img src="../images/quality.svg" alt="Quality"><span>Quality.svg</span></div>
+        <div class="icon-card"><img src="../images/Insight-Actionable (1).svg" alt="Speed"><span>Insight-Actionable.svg</span></div>
+        <div class="icon-card"><img src="../images/Isolate-network-issues (1).svg" alt="Reliability"><span>Isolate-network-issues.svg</span></div>
+        <div class="icon-card"><img src="../images/optimize-IoT-network.svg" alt="Analytics"><span>optimize-IoT-network.svg</span></div>
+        <div class="icon-card"><img src="../images/design-services-icon.png" alt="Cloud"><span>Design-services.svg</span></div>
+        <div class="icon-card"><img src="../images/IoT-consulting-icon.png" alt="Network"><span>IoT-consulting.svg</span></div>
+        <div class="icon-card"><img src="../images/network-Characterization-icon.png" alt="Data"><span>Network.svg</span></div>
+        <div class="icon-card"><img src="../images/testing-icon (1).png" alt="Support"><span>Testing.svg</span></div>
+        <div class="icon-card"><img src="../images/wireless-network-icon (1).png" alt="Global"><span>Wireless-network.svg</span></div>
+        <div class="icon-card"><img src="../images/dumper (1).png" alt="Security"><span>Dumper.svg</span></div>
+        <div class="icon-card"><img src="../images/oil-pump.png" alt="Security"><span>Oil-pump.svg</span></div>
         </div>
 
       <div class="icon-specs">
