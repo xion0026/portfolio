@@ -658,6 +658,66 @@
   position: relative;
   z-index: 2;
 }
+
+/* --- Design Engineer 专属：Transformation Section 诊断风格 --- */
+.section-transformation {
+  /* 使用类似 Hero 的网格，但更安静（蓝灰色调） */
+  background: 
+    repeating-linear-gradient(90deg, rgba(108, 150, 188, 0.05) 0 1px, transparent 1px 60px),
+    repeating-linear-gradient(0deg, rgba(108, 150, 188, 0.05) 0 1px, transparent 1px 60px),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 100px 0;
+}
+
+/* 面对面对比布局 */
+.transformation-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 80px;
+  align-items: flex-start;
+}
+
+.transformation-block:last-child {
+  margin-bottom: 0;
+}
+
+/* 统一卡片与样机样式 */
+.image-mockup {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.mockup-modern {
+  border-color: #1081cb; /* 品牌色强调条 */
+  border-width: 2px;
+}
+
+/* 状态标签 */
+.view-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.tag-problem {
+  color: #ef4444; /* 问题红 */
+}
+
+.tag-solution {
+  color: #1081cb; /* 品牌蓝 */
+}
+
 /* footer */
 
     .footer-top,
@@ -933,37 +993,50 @@
   </div>
 </section>
 <!-- Final Design -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Final Design</h2>
-          <div class="image-stack">
-            <div class="image-block">
-              <img src="../images/ui1.png" alt="Final homepage redesign for Cheetah Networks">
-              <p class="caption">A clear modular layout improves scanability and makes the value proposition easier to understand.</p>
-            </div>
-            <div class="image-block">
-              <img src="../images/ui2.png" alt="Service section redesign for Cheetah Networks">
-              <p class="caption">Key services are highlighted more clearly to support faster decision-making.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="transformation" class="section section-full-width section-transformation">
+  <div class="container">
+    <h2 class="section-title">Deep-Dive Transformation</h2>
+    <p class="section-intro">
+      Bridging the gap between Carrier-Grade visibility and B2B user experience.
+    </p>
 
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Before vs After</h2>
-          <div class="before-after">
-            <div class="image-block">
-              <img src="../images/background.png" alt="Before redesign">
-              <p class="caption">Before: cluttered layout with weaker content structure.</p>
-            </div>
-            <div class="image-block">
-              <img src="../images/after.png" alt="After redesign">
-              <p class="caption">After: cleaner structure, stronger hierarchy, and a more modern presentation.</p>
-            </div>
-          </div>
+    <div class="transformation-block">
+      <div class="legacy-view">
+        <span class="view-tag tag-problem">✕ Legacy</span>
+        <div class="image-mockup">
+          <img src="../images/background.png" alt="Legacy IA">
         </div>
-      </section>
+        <p><strong>Cluttered Architecture:</strong> Overly dense layout led to high drop-off rates on service layers.</p>
+      </div>
+      <div class="new-view">
+        <span class="view-tag tag-solution">✦ Final Design</span>
+        <div class="image-mockup mockup-modern">
+          <img src="../images/after.png" alt="Final IA Design">
+        </div>
+        <p><strong>Optimized IA:</strong> Rationalized taxonomy into intuitive user flows, improving scannability by 60%.</p>
+      </div>
+    </div>
+
+    <div class="transformation-block">
+      <div class="legacy-view">
+        <span class="view-tag tag-problem">✕ Technical Debt</span>
+        <div class="image-mockup">
+          <img src="../images/transformation/perf_before.png" alt="Legacy Performance">
+        </div>
+        <p><strong>Performance Friction:</strong> Poor mobile adaptivity penalized basic SEO standards.</p>
+      </div>
+      <div class="new-view">
+        <span class="view-tag tag-solution">✦ Engineering First</span>
+        <div class="image-mockup mockup-modern">
+          <img src="../images/transformation/perf_after.png" alt="Engineering Final">
+        </div>
+        <p><strong>Design Tokens:</strong> Implemented a fluid grid for 1:1 parity between design files and CSS variables.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       <section class="section">
         <div class="container">
