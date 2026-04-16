@@ -562,14 +562,6 @@
       color: var(--muted);
       font-size: 0.8rem;
     }
-
-    .bullet-list {
-      padding-left: 18px;
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.9;
-    }
-
     .image-block {
       background: var(--surface-soft);
       border-radius: var(--radius-md);
@@ -592,6 +584,82 @@
       color: var(--muted);
       font-size: 0.88rem;
     }
+
+    /* --- code --- */
+.section-engineering {
+  background: 
+    repeating-linear-gradient(90deg, rgba(16, 129, 203, 0.03) 0 1px, transparent 1px 40px),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.engineering-card {
+  border-left: 4px solid #1081cb !important; /* 强调条增加专业感 */
+}
+
+.bullet-list-spec {
+  list-style: none;
+  padding: 0;
+}
+
+.bullet-list-spec li {
+  margin-bottom: 24px;
+}
+
+.bullet-list-spec li strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+/* --- Approach --- */
+.approach-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.approach-icon {
+  width: 40px;
+  height: 40px;
+  background: #f0f7ff;
+  color: #1081cb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.approach-card:hover {
+  transform: translateY(-8px);
+  border-color: #1081cb;
+  box-shadow: 0 20px 40px rgba(16, 129, 203, 0.08);
+}
+
+/* --- Process Cards --- */
+.process-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.step-num {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(16, 129, 203, 0.05); /* 极淡的数字作为背景 */
+  line-height: 1;
+  pointer-events: none;
+}
+
+.process-card h3 {
+  position: relative;
+  z-index: 2;
+}
+/* footer */
+
     .footer-top,
     .footer-bottom {
       display: grid;
@@ -797,60 +865,74 @@
   </div>
 </section>
 <!-- Design-to-Code -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Design-to-Code</h2>
-          <div class="card">
-            <ul class="bullet-list">
-              <li>Scalable Component Library: Designed a modular UI kit in Figma to ensure a 1:1 hand-off, minimizing development friction.</li>
-              <li>Performance-First Design: Optimized all visual assets and layout structures to ensure fast TTI (Time to Interactive) across B2B network environments.</li>
-              <li>Responsive Grid Logic: Implemented a fluid grid system that maintains readability from 27-inch monitors to mobile devices.</li>
-              
-            </ul>
-          </div>
-        </div>
-      </section>
+      <section class="section section-engineering">
+  <div class="container">
+    <h2 class="section-title">Design-to-Code Strategy</h2>
+    <div class="card engineering-card">
+      <ul class="bullet-list-spec">
+        <li>
+          <strong>Scalable Design Tokens</strong>
+          Defined a systematic color and typography scale in Figma to ensure a 1:1 parity between design files and CSS variables, drastically reducing hand-off friction.
+        </li>
+        <li>
+          <strong>Performance-Driven Assets</strong>
+          Optimized SVG iconography and implemented Next.js Image components to ensure ultra-fast Time-to-Interactive (TTI) for high-traffic B2B environments.
+        </li>
+        <li>
+          <strong>Fluid Grid Systems</strong>
+          Architected a flexible 12-column responsive grid using CSS Grid and Flexbox, maintaining layout integrity from ultra-wide monitors to mobile devices.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 <!-- Approach -->
       <section class="section">
-        <div class="container">
-          <h2 class="section-title">My Approach</h2>
-          <div class="grid-3">
-            <div class="card">
-              <h3>Simplified Architecture</h3>
-              <p>Reorganized content so users could understand the business faster.</p>
-            </div>
-            <div class="card">
-              <h3>Clear Hierarchy</h3>
-              <p>Used stronger spacing, headings, and grouping to improve readability.</p>
-            </div>
-            <div class="card">
-              <h3>Modular Layout</h3>
-              <p>Introduced flexible card-based sections to support future content growth.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Process</h2>
-          <div class="grid-3">
-            <div class="card">
-              <h3>Research</h3>
-              <p>Competitor analysis, content audit, and review of the existing experience.</p>
-            </div>
-            <div class="card">
-              <h3>Ideation</h3>
-              <p>Wireframes, section experiments, and layout exploration.</p>
-            </div>
-            <div class="card">
-              <h3>Design</h3>
-              <p>High-fidelity UI, responsive layouts, and a cleaner visual system.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+  <div class="container">
+    <h2 class="section-title">Design Principles</h2>
+    <div class="grid-3">
+      <div class="card approach-card">
+        <div class="approach-icon">IA</div>
+        <h3>Information Architecture</h3>
+        <p>Restructured the complex telecom service taxonomy into intuitive user flows, reducing cognitive load for new leads.</p>
+      </div>
+      <div class="card approach-card">
+        <div class="approach-icon">VH</div>
+        <h3>Visual Hierarchy</h3>
+        <p>Leveraged purposeful white space and high-contrast typography to guide users through high-stakes technical data.</p>
+      </div>
+      <div class="card approach-card">
+        <div class="approach-icon">MD</div>
+        <h3>Modular Scalability</h3>
+        <p>Built a robust library of card-based components, allowing the Cheetah team to easily scale content without breaking the UI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Process -->
+     <section class="section section-process">
+  <div class="container">
+    <h2 class="section-title">Development Workflow</h2>
+    <div class="grid-3 process-stepper">
+      <div class="card process-card">
+        <span class="step-num">01</span>
+        <h3>Audit & Research</h3>
+        <p>Deep-dive into legacy site metrics, competitor benchmarking, and stakeholder interviews to define project KPIs.</p>
+      </div>
+      <div class="card process-card">
+        <span class="step-num">02</span>
+        <h3>Rapid Prototyping</h3>
+        <p>Iterating from low-fidelity wireframes to interactive Figma prototypes, testing edge cases in responsive behavior.</p>
+      </div>
+      <div class="card process-card">
+        <span class="step-num">03</span>
+        <h3>Handoff & QA</h3>
+        <p>Delivering production-ready assets and technical documentation to ensure pixel-perfect front-end implementation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Final Design -->
       <section class="section">
         <div class="container">
           <h2 class="section-title">Final Design</h2>
